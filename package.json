@@ -1,12 +1,13 @@
 {
-  "name": "comments-widget",
+  "name": "skillboxgram",
   "version": "1.0.0",
-  "description": "simple app in react-redux",
+  "description": "Simple application like instagram based on unsplash API",
   "main": "index.js",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
+    "react-router": "^4.3.1",
     "redux": "^4.0.1"
   },
   "devDependencies": {
@@ -32,7 +33,7 @@
     "skillbox",
     "redux",
     "js",
-    "widget"
+    "instagram-app"
   ],
   "author": "Alexandr Urbanyuk",
   "license": "MIT"
