@@ -12,6 +12,6 @@ const initialState = [];
 // const store = createStore(reducer, initialState);
 
 ReactDOM.render(
-    <App/>,
+  <App/>,
   document.querySelector('#app')
 );
