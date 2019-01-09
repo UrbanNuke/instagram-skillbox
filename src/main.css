@@ -1,0 +1,16 @@
+@import "bootstrap.min.css";
+
+.authorize-block {
+  padding: 20px 0px;
+  border-radius: 3px;
+  background: #e6e4e9;
+}
+
+.index-logo {
+  background-size: 50%;
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0px 10px 0px;
+}
+
