@@ -1,8 +1,8 @@
 import React from 'react';
-import Unsplash from 'unsplash-js';
 import {Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 import Index from '../components';
+import Auth from '../components';
 
 class App extends React.Component {
 
@@ -12,7 +12,7 @@ class App extends React.Component {
       <div>
         <div>
           <Route path="/" exact component={Index} />
-          <Route path="/auth" />
+          <Route path="/auth" component={Auth} />
         </div>
       </div>
     )
