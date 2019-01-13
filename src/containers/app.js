@@ -1,22 +1,45 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import Index from '../components';
-import Auth from '../components';
+import Auth from './auth';
+
+import {loadUserInfo} from '../actions/index';
+
 
 class App extends React.Component {
 
   render() {
-
+    const {store, loadUserInfo} = this.props;
     return(
-      <div>
-        <div>
-          <Route path="/" exact component={Index} />
-          <Route path="/auth" component={Auth} />
-        </div>
+      <div className="container">
+        <Route 
+          path="/" 
+          exact 
+          render={() => <Index />}
+        />
+        <Route 
+          path="/auth"
+          render={() => <Auth loadUserInfo={loadUserInfo} store={store} />} 
+        />
       </div>
     )
   }
 }
 
-export default App;
+const mapStateToProps = (store) => {
+  return {
+    store: store,
+    user: store.user,
+    photos: store.photos,
+    currentPhoto: store.currentPhoto,
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loadUserInfo: (res) => dispatch(loadUserInfo(res))
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,5 +1,9 @@
 @import "bootstrap.min.css";
 
+p {
+  margin: 0;
+}
+
 .authorize-block {
   padding: 20px 0px;
   border-radius: 3px;
@@ -12,5 +16,32 @@
   display: block;
   margin: 0 auto;
   padding: 20px 0px 10px 0px;
+}
+
+.auth-logo img {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+}
+
+.auth-avatar img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.auth-panel {
+  margin-top: 12px;
+  background: rgba(168, 159, 225, 0.1);
+  padding: 5px 17px;
+  border-radius: 10px;
+}
+
+.auth-statistic p {
+  width: 150px;
+}
+
+.auth-statistic p:last-child {
+  width: 300px;
 }
 

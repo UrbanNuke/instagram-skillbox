@@ -9,16 +9,15 @@ import App from './containers/app';
 import {reducer} from './reducers/reducer';
 
 import {createStore} from 'redux';
-import Index from './components';
 
-const initialState = [];
-
-// const store = createStore(reducer, initialState);
+export const store = createStore(reducer);
 
 const application = (
-  <BrowserRouter basename="/">
-    <App />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
 );
 
 ReactDOM.render(application, document.querySelector('#app')
