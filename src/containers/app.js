@@ -10,7 +10,7 @@ import {loadUserInfo} from '../actions/index';
 class App extends React.Component {
 
   render() {
-    const {store, loadUserInfo} = this.props;
+    const {store, loadUserInfo, loadUserPhotos} = this.props;
     return(
       <div className="container">
         <Route 
@@ -20,7 +20,7 @@ class App extends React.Component {
         />
         <Route 
           path="/auth"
-          render={() => <Auth loadUserInfo={loadUserInfo} store={store} />} 
+          render={() => <Auth loadUserInfo={loadUserInfo} loadUserPhotos={loadUserPhotos} store={store} />} 
         />
       </div>
     )
@@ -38,7 +38,8 @@ const mapStateToProps = (store) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    loadUserInfo: (res) => dispatch(loadUserInfo(res))
+    loadUserInfo: (res) => dispatch(loadUserInfo(res)),
+    loadUserPhotos: (res) => dispatch(loadUserPhotos(res))
   }
 };
 

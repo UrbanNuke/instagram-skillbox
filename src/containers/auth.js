@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/header';
-import {setToken, unsplash, getUser} from '../unsplash/unsplash';
+import {setToken, unsplash, getUser, getPhotos} from '../unsplash/unsplash';
 
 
 class Auth extends React.Component {
@@ -14,6 +14,8 @@ class Auth extends React.Component {
       }
       let data = await getUser(unsplash);
       loadUserInfo(data);
+      let photos = await getPhotos(unsplash);
+      loadUserPhotos(photos);
     }
     getUserData();
   }
@@ -35,6 +37,7 @@ class Auth extends React.Component {
     return(
       <div className="auth-page">
         <Header user={user}/>
+        <Photos photos={photos} />
       </div>
     )
   }

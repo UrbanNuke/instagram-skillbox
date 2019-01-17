@@ -39,3 +39,10 @@ export const getUser = (unsplash) => {
   return unsplash.currentUser.profile()
     .then(toJson)
 }
+
+export const getPhotos = (unsplash) => {
+  return (
+    unsplash.photos.listPhotos(1, 9 , latest)
+      .then(toJson)
+  )
+}

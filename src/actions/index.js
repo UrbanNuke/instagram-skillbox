@@ -14,6 +14,13 @@ export const loadUserInfo = (res) => {
   }
   return obj;
 }
+export const loadUserPhotos = (res) => {
+  let photos = {
+    items: [...res],
+    type: 'LOAD_USER_PHOTOS'
+  }
+  return photos;
+}
 
 // export const getAuthPage = () => {
 //   return 
