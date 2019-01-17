@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Index from '../components';
 import Auth from './auth';
 
-import {loadUserInfo} from '../actions/index';
+import {loadUserInfo, loadUserPhotos} from '../actions/index';
 
 
 class App extends React.Component {

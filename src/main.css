@@ -45,3 +45,53 @@ p {
   width: 300px;
 }
 
+/* Photos block */
+
+#photos {
+  background: #f6f5fc;
+  padding: 17px 3px;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.photo-wrap {
+  padding: 10px 10px;
+  background: #837f7f;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.photos-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.photo-item {
+  max-width: 315px;
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.photo-item img {
+  max-width: 125%;
+}
+
+.photo-wrap__header {
+  display: flex;
+}
+
+.author-img img{
+  border-radius: 50%;
+}
+
+.author {
+  margin-left: 15px;
+}
+
+.count-likes {
+  margin-top: 10px;
+  color: #f5f0f0;
+}
+
+

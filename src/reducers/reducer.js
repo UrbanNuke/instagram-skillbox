@@ -23,11 +23,8 @@ export const reducer = (state = initialState, action) => {
       return {...state, user: userInfo}
 
     case 'LOAD_USER_PHOTOS':
-      let userPhotos = {
-        photos: [action.items]
-      }
       console.log('userPhotos: loaded');
-      return {...state, photos: userPhotos}
+      return {...state, photos: action.items}
     default:
       return state;
   }

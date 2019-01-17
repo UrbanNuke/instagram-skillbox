@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/header';
+import Photos from '../components/photos';
 import {setToken, unsplash, getUser, getPhotos} from '../unsplash/unsplash';
 
 
@@ -7,15 +8,15 @@ class Auth extends React.Component {
   constructor(props) {
     super(props);
     
-    const {loadUserInfo} = props;
+    const {loadUserInfo, loadUserPhotos} = props;
     const getUserData = async () => {
       if (!localStorage.getItem('token')) {
         let token = await this.setAuthToken();
       }
       let data = await getUser(unsplash);
-      loadUserInfo(data);
+      await loadUserInfo(data);
       let photos = await getPhotos(unsplash);
-      loadUserPhotos(photos);
+      await loadUserPhotos(photos);
     }
     getUserData();
   }
