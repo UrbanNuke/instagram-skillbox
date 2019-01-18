@@ -1,4 +1,3 @@
-import img from './assets/logo.png';
 import css from './main.css';
 import React from 'react';
 import ReactDOM from 'react-dom';

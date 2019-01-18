@@ -23,26 +23,32 @@ export const authenticationUnsplash = (unsplash) => {
   location.assign(authenticationUrl);
 }
 
-export const setToken = (unsplash) => {
+export const getToken = (unsplash) => {
+    if (localStorage.getItem('token')) {
+      return unsplash.auth.setBearerToken(localStorage.getItem('token'));
+      
+    };
     const code = location.search.split('code=')[1];
     if (code) {
-      unsplash.auth.userAuthentication(code)
-        .then(toJson => {
-          console.log(toJson);
-          localStorage.setItem('token', toJson.access_token);
+      return unsplash.auth.userAuthentication(code)
+        .then(toJson)
+        .then(resp => {
+          localStorage.setItem('token', resp.access_token);
+          unsplash.auth.setBearerToken(resp.access_token);
         });
     }
 }
 
 export const getUser = (unsplash) => {
-  unsplash.auth.setBearerToken(localStorage.getItem('token'));
   return unsplash.currentUser.profile()
     .then(toJson)
+    .then(resp => resp)
 }
 
 export const getPhotos = (unsplash) => {
   return (
     unsplash.photos.listPhotos(1, 9 , 'latest')
       .then(toJson)
+      .then(resp => resp)
   )
 }

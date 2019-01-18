@@ -8,7 +8,7 @@ const Photo = ({photo}) => {
         <div className="author-img">
           <img src={photo.user.profile_image.small}></img>
         </div>
-        <div className="author"><a href={photo.user.links.self}>{photo.user.username}</a></div>
+        <div className="author"><a href={photo.user.links.html}>{photo.user.username}</a></div>
       </div>
       <hr></hr>
       <div className="photo-item">
@@ -17,7 +17,7 @@ const Photo = ({photo}) => {
       <div className="likes">
         <div className="likes__hearts">
           <a href="#">
-            <img src="build/images/hearts.png"></img>
+            <div className={photo.liked_by_users ? 'like' : 'unlike'}></div>
           </a>
         </div>
         <p className="likes__count">{photo.likes}</p>

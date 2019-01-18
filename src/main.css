@@ -4,6 +4,10 @@ p {
   margin: 0;
 }
 
+a, a:hover {
+  text-decoration: none;
+}
+
 .authorize-block {
   padding: 20px 0px;
   border-radius: 3px;
@@ -74,7 +78,7 @@ p {
 }
 
 .photo-item img {
-  max-width: 125%;
+  max-width: 130%;
 }
 
 .photo-wrap__header {
@@ -89,16 +93,39 @@ p {
   margin-left: 15px;
 }
 
+.author a {
+  color: #dadfe5;
+  text-decoration: none;
+}
+
+.author a:hover {
+  color: #fff;
+}
+
 .likes {
   margin-top: 10px;
   color: #f5f0f0;
-  display: inline-block;
   background: #fff;
   border-radius: 5px;
   padding: 5px;
+  display: flex;
+  width: 70px;
+  justify-content: space-evenly;
 }
 
 .likes__count {
   color: #000;
+}
+
+.unlike {
+  width: 25px;
+  height: 25px;
+  background: url('assets/hearts.png') 0 0;
+}
+
+.like {
+  width: 25px;
+  height: 25px;
+  background: url('assets/hearts.png') 25px 0;
 }
 

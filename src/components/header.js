@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/logo.png';
 
 const Header = ({user}) => {
   return (
@@ -6,7 +7,7 @@ const Header = ({user}) => {
       <div className="row">
         <div className="col-md-12">
           <div className="auth-logo">
-            <img src="build/images/logo.png"></img>
+            <img src={logo}></img>
           </div>
         </div>
       </div>
