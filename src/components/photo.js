@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Photo = ({photo}) => {
+const Photo = ({photo, likePhoto}) => {
 
   return (
     <div className="photo-wrap">
@@ -16,9 +16,17 @@ const Photo = ({photo}) => {
       </div>
       <div className="likes">
         <div className="likes__hearts">
-          <a href="#">
-            <div className={photo.liked_by_users ? 'like' : 'unlike'}></div>
-          </a>
+          {
+            photo.liked_by_users ? (
+              <a onClick={ev => {ev.preventDefault(); unlikePhoto(photo.id)}}>
+                <div className='unlike'></div>
+              </a>
+            ) : (
+              <a onClick={ev => {ev.preventDefault(); likePhoto(photo.id)}}>
+                <div className='like'></div>
+              </a>
+            )
+          }
         </div>
         <p className="likes__count">{photo.likes}</p>
       </div>

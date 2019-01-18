@@ -22,6 +22,9 @@ export const loadUserPhotos = (res) => {
   return photos;
 }
 
-// export const getAuthPage = () => {
-//   return 
+// export const likePhoto = (like) => {
+//   return {
+//     type: 'LIKE_PHOTO',
+//     like,
+//   }
 // }

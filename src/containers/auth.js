@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/header';
 import Photos from '../components/photos';
-import {getToken, unsplash, getUser, getPhotos} from '../unsplash/unsplash';
+import {getToken, unsplash, getUser, getPhotos, likePhoto} from '../unsplash/unsplash';
 
 class Auth extends React.Component {
   constructor(props) {
@@ -18,6 +18,12 @@ class Auth extends React.Component {
     getUserData();
   }
 
+  likedPhoto(id) {
+    console.log('work');
+    let like = likePhoto(unsplash, id);
+    console.log(like, id);
+    return like;
+  }
 
   render() {
     const {user, photos, currentPhoto} = this.props.store;
@@ -25,7 +31,7 @@ class Auth extends React.Component {
     return(
       <div className="auth-page">
         <Header user={user}/>
-        <Photos photos={photos} />
+        <Photos photos={photos} likePhoto={this.likedPhoto.bind(this)}/>
       </div>
     )
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Photo from './photo';
 
-const Photos = ({photos}) => {
+const Photos = ({photos, likePhoto}) => {
   return (
     <section id="photos">
       <div className="col-md-12">
@@ -12,6 +12,7 @@ const Photos = ({photos}) => {
                 <Photo 
                   photo={photo}
                   key={index}
+                  likePhoto={likePhoto.bind(this)}
                 />
               )
             })

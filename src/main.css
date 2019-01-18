@@ -6,6 +6,7 @@ p {
 
 a, a:hover {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .authorize-block {
@@ -117,13 +118,13 @@ a, a:hover {
   color: #000;
 }
 
-.unlike {
+.like {
   width: 25px;
   height: 25px;
   background: url('assets/hearts.png') 0 0;
 }
 
-.like {
+.unlike {
   width: 25px;
   height: 25px;
   background: url('assets/hearts.png') 25px 0;
