@@ -89,9 +89,16 @@ p {
   margin-left: 15px;
 }
 
-.count-likes {
+.likes {
   margin-top: 10px;
   color: #f5f0f0;
+  display: inline-block;
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px;
 }
 
+.likes__count {
+  color: #000;
+}
 

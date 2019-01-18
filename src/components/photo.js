@@ -14,7 +14,14 @@ const Photo = ({photo}) => {
       <div className="photo-item">
         <img src={photo.urls.small}></img>
       </div>
-      <div className="count-likes">Likes: {photo.likes}</div>
+      <div className="likes">
+        <div className="likes__hearts">
+          <a href="#">
+            <img src="build/images/hearts.png"></img>
+          </a>
+        </div>
+        <p className="likes__count">{photo.likes}</p>
+      </div>
     </div>
   )
 }
