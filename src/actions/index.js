@@ -22,9 +22,16 @@ export const loadUserPhotos = (res) => {
   return photos;
 }
 
-// export const likePhoto = (like) => {
-//   return {
-//     type: 'LIKE_PHOTO',
-//     like,
-//   }
-// }
+export const likePhotoAction = (id) => {
+  return {
+    type: 'LIKE_PHOTO',
+    id
+  }
+}
+export const unlikePhotoAction = (id) => {
+  console.log('rabotaet', id)
+  return {
+    type: 'UNLIKE_PHOTO',
+    id
+  }
+}

@@ -78,6 +78,11 @@ a, a:hover {
   overflow: hidden;
 }
 
+.photo-item:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 .photo-item img {
   max-width: 130%;
 }

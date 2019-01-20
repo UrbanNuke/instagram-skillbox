@@ -26,9 +26,27 @@ export const reducer = (state = initialState, action) => {
       console.log('userPhotos: loaded');
       return {...state, photos: action.items}
       
-    // case 'LIKE_PHOTO':
-    //   console.log('liked');
-    //   return 
+    case 'LIKE_PHOTO':
+      console.log('work');
+      let photosWithLike = state.photos.map(photo => {
+        if (photo.id === action.id) {
+          photo.liked_by_user = true;
+          photo.likes += 1;
+        }
+        return photo;
+      });
+      return {...state, photos: photosWithLike}
+
+    case 'UNLIKE_PHOTO':
+      console.log('work');
+      let photosWithUnlike = state.photos.map(photo => {
+        if (photo.id === action.id) {
+          photo.liked_by_user = false;
+          photo.likes -= 1;
+        }
+        return photo;
+      });
+      return {...state, photos: photosWithUnlike}
 
     default:
       return state;

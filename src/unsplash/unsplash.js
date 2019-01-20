@@ -60,3 +60,11 @@ export const likePhoto = (unsplash, id) => {
       .then(resp => resp)
   )
 }
+
+export const unlikePhoto = (unsplash, id) => {
+  return (
+    unsplash.photos.unlikePhoto(id)
+      .then(toJson)
+      .then(resp => resp)
+  )
+}
