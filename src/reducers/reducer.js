@@ -27,7 +27,7 @@ export const reducer = (state = initialState, action) => {
       return {...state, photos: action.items}
       
     case 'LIKE_PHOTO':
-      console.log('work');
+      console.log('liked photo');
       let photosWithLike = state.photos.map(photo => {
         if (photo.id === action.id) {
           photo.liked_by_user = true;
@@ -38,7 +38,7 @@ export const reducer = (state = initialState, action) => {
       return {...state, photos: photosWithLike}
 
     case 'UNLIKE_PHOTO':
-      console.log('work');
+      console.log('unliked photo');
       let photosWithUnlike = state.photos.map(photo => {
         if (photo.id === action.id) {
           photo.liked_by_user = false;
@@ -47,7 +47,12 @@ export const reducer = (state = initialState, action) => {
         return photo;
       });
       return {...state, photos: photosWithUnlike}
-
+    
+    case 'ADD_CURRENT_PHOTO':
+      console.log('add current photo in store')
+      let currentPhoto = state.photos.filter(photo => photo.id === action.id);
+      return {...state, currentPhoto: currentPhoto[0]}
+      
     default:
       return state;
   }
