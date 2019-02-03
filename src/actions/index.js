@@ -29,9 +29,17 @@ export const likePhotoAction = (id) => {
   }
 }
 export const unlikePhotoAction = (id) => {
-  console.log('rabotaet', id)
+  
   return {
     type: 'UNLIKE_PHOTO',
+    id
+  }
+}
+
+export const addCurrentPhotoAction = (id) => {
+  console.log('rabotaet', id)
+  return {
+    type: 'ADD_CURRENT_PHOTO',
     id
   }
 }
