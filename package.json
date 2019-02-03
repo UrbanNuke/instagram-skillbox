@@ -1,6 +1,6 @@
 {
   "name": "skillboxgram",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Simple application like instagram based on unsplash API",
   "main": "index.js",
   "dependencies": {
