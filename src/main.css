@@ -89,6 +89,13 @@ a, a:hover {
 
 .photo-wrap__header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photo-wrap__header_left {
+  display: flex;
+  align-items: center;
 }
 
 .author-img img{
@@ -96,6 +103,7 @@ a, a:hover {
 }
 
 .author {
+  display: inline-block;
   margin-left: 15px;
 }
 
@@ -106,6 +114,12 @@ a, a:hover {
 
 .author a:hover {
   color: #fff;
+}
+
+.author-date {
+  font-size: 12px;
+  margin-left: 40px;
+  color: #bab3b3;
 }
 
 .likes {
@@ -135,3 +149,65 @@ a, a:hover {
   background: url('assets/hearts.png') 25px 0;
 }
 
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/bg.png');
+  z-index: 10;
+}
+
+.popup__block {
+  padding: 25px;
+  margin: 45px auto 0 auto;
+  min-width: 955px;
+  display: flex;
+  width: 80%;
+  background: #e7dfdf;
+  border-radius: 5px;
+  min-width: 960px;
+  max-width: 1150px;
+}
+
+.popup__right-block {
+  margin-left: 28px;
+  border-left: 1px solid white;
+  padding-left: 20px;
+}
+
+.popup__photo img {
+  width: 660px;
+  object-fit: cover;
+  height: 570px;
+}
+
+.popup__author-img {
+  display: inline-block;
+}
+
+.popup__author a {
+  color: #1e0202;
+}
+
+.popup__author a:hover {
+  color: #9aa6d7;
+}
+
+.popup-author-date {
+  margin-left: 0;
+}
+
+.popup__right-block .likes {
+  margin-top: 20px;
+}
+
+.popup-description h6 {
+  font-weight: normal;
+}
+
+.spiner {
+  margin: 30px auto 0 auto;
+  display: block;
+}

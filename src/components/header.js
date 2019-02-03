@@ -7,7 +7,9 @@ const Header = ({user}) => {
       <div className="row">
         <div className="col-md-12">
           <div className="auth-logo">
-            <img src={logo}></img>
+            <a href="https://skillbox.ru/">
+              <img src={logo}></img>
+            </a>
           </div>
         </div>
       </div>
@@ -28,7 +30,7 @@ const Header = ({user}) => {
             <div className="auth-statistic d-flex justify-content-between">
               <p>{`Total photos: ${user.total_photos}`}</p>
               <p>{`Total likes: ${user.total_likes}`}</p>
-              <p>{`Biography: ${user.bio ? user.bio : 'nothing'}`}</p>
+              <p>{`Biography: ${user.bio ? user.bio : 'Please tell about yourself'}`}</p>
             </div>
           </div>
         </div>
